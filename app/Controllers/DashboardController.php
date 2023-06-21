@@ -18,11 +18,6 @@ class DashboardController extends BaseController
         $_SERVER['navAktif'] = 'admin';
         return view('dashboard/admin/index');
     }
-    function anggota()
-    {
-        $_SERVER['navAktif'] = 'anggota';
-        return view('dashboard/anggota/index');
-    }
     function buku()
     {
         $_SERVER['navAktif'] = 'buku';

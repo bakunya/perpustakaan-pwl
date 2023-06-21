@@ -18,6 +18,7 @@
     }
 </style>
 
+<script src="<?= base_url("swal.js") ?>"></script>
 
 <script>
     var toggleSidebar = document.getElementById('toggleSidebar');

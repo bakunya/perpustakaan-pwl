@@ -10,7 +10,7 @@
     <style>
         .container {
             padding-left: 0px;
-            width: 100%;
+            width: 100vw !important;
             margin: 0;
             display: flex;
 

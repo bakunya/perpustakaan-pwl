@@ -8,4 +8,26 @@
     </div>
 </div>
 
+
+<script>
+	document.addEventListener("DOMContentLoaded", _ => {
+		// get query string as message
+		const urlParams = new URLSearchParams(window.location.search);
+		const message = urlParams.get('message');
+		
+		if (message) {
+			Swal.fire({
+				icon: 'success',
+				title: 'Berhasil',
+				text: message,
+			})
+			.then(({ isDismissed, isConfirmed }) => {
+				if(isDismissed || isConfirmed) {
+					window.history.pushState('', '', window.location.toString().split('?')[0] + '?');
+				}
+			})
+		}
+	})
+</script>
+
 <?php include APPPATH . 'Views/dashboard/footer.php'; ?>
